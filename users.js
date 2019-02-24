@@ -4,6 +4,4 @@ function getUsers() {
   return users;
 }
 
-module.exports = {
-  getUsers
-};
+export default getUsers;
