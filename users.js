@@ -1,9 +1,9 @@
-(function() {
-  var users = ["Igor", "Dima", "Petya"];
+var users = ["Igor", "Dima", "Petya"];
 
-  function getUsers() {
-    return users;
-  }
+function getUsers() {
+  return users;
+}
 
-  APP.getUsers = getUsers;
-})();
+module.exports = {
+  getUsers
+};

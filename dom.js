@@ -1,22 +1,22 @@
-(function() {
-  function addUserToDom(name) {
-    const node = document.createElement("li");
-    const text = document.createTextNode(name);
-    node.appendChild(text);
+const getUsers = require("./users").getUsers;
 
-    document.getElementById("users").appendChild(node);
-  }
+function addUserToDom(name) {
+  const node = document.createElement("li");
+  const text = document.createTextNode(name);
+  node.appendChild(text);
 
-  document.getElementById("submit").addEventListener("click", function() {
-    var input = document.getElementById("input");
-    addUserToDom(input.value);
+  document.getElementById("users").appendChild(node);
+}
 
-    input.value = "";
-  });
+document.getElementById("submit").addEventListener("click", function() {
+  var input = document.getElementById("input");
+  addUserToDom(input.value);
 
-  var users = APP.getUsers();
+  input.value = "";
+});
 
-  for (var i = 0; i < users.length; i++) {
-    addUserToDom(users[i]);
-  }
-})();
+var users = getUsers();
+
+for (var i = 0; i < users.length; i++) {
+  addUserToDom(users[i]);
+}
