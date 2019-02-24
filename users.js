@@ -1,4 +1,4 @@
-function usersWrapper() {
+(function() {
   var users = ["Igor", "Dima", "Petya"];
 
   function getUsers() {
@@ -6,6 +6,4 @@ function usersWrapper() {
   }
 
   APP.getUsers = getUsers;
-}
-
-usersWrapper();
+})();

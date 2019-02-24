@@ -1,4 +1,4 @@
-function domWrapper() {
+(function() {
   function addUserToDom(name) {
     const node = document.createElement("li");
     const text = document.createTextNode(name);
@@ -19,6 +19,4 @@ function domWrapper() {
   for (var i = 0; i < users.length; i++) {
     addUserToDom(users[i]);
   }
-}
-
-domWrapper();
+})();
